@@ -18,12 +18,12 @@
   },
   "autoload": {
     "psr-4": {
-      "MSBios\\SOLID\\": "src/"
+      "MSBios\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "MSBiosTest\\SOLID\\": "tests/"
+      "MSBiosTest\\": "tests/"
     }
   },
   "extra": [],
