@@ -14,7 +14,6 @@ use MSBios\IOrderSource;
  */
 class ApiOrderSource implements IOrderSource
 {
-
     /**
      * @param $orderID
      * @return mixed
