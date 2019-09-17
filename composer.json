@@ -1,0 +1,36 @@
+{
+  "name": "msbios/solid",
+  "description": "SOLID - Examples",
+  "type": "project",
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "SOLID"
+  ],
+  "homepage": "http://msbios.com/",
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "require": {
+    "msbios/msbios": "^1.0"
+  },
+  "require-dev": {
+    "msbios/test": "^1.0",
+    "msbios/debug": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MSBios\\SOLID\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MSBiosTest\\SOLID\\": "tests/"
+    }
+  },
+  "extra": [],
+  "scripts": {
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf",
+    "serve": "php -S 0.0.0.0:3107 -t public public/index.php",
+    "test": "phpunit"
+  }
+}
