@@ -6,6 +6,7 @@
 
 namespace MSBios\Source;
 
+use MSBios\Config\MySQLSourceConfig;
 use MSBios\OrderSourceInterface;
 
 /**
@@ -14,6 +15,17 @@ use MSBios\OrderSourceInterface;
  */
 class MySQLOrderSource implements OrderSourceInterface
 {
+    /** @var MySQLSourceConfig */
+    protected $config;
+
+    /**
+     * MySQLOrderSource constructor.
+     * @param MySQLSourceConfig $config
+     */
+    public function __construct(MySQLSourceConfig $config)
+    {
+        $this->config = $config;
+    }
 
     /**
      * @param $orderID
@@ -21,7 +33,8 @@ class MySQLOrderSource implements OrderSourceInterface
      */
     public function load($orderID)
     {
-        $pdo = new \PDO($this->config->getDsn(), $this->config->getDBUser(), $this->config->getDBPassword());
+        /** @var \PDO $pdo */
+        $pdo = new \PDO($this->config->getDns(), $this->config->getUser(), $this->config->getPassword());
         $statement = $pdo->prepare('SELECT * FROM `orders` WHERE id=:id');
         $statement->execute([':id' => $orderID]);
         return $query->fetchObject('Order');
