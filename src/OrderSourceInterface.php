@@ -7,10 +7,10 @@
 namespace MSBios;
 
 /**
- * Interface IOrderSource
+ * Interface OrderSourceInterface
  * @package MSBios
  */
-interface IOrderSource
+interface OrderSourceInterface
 {
     /**
      * @param $orderID

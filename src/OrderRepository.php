@@ -12,25 +12,25 @@ namespace MSBios;
  */
 class OrderRepository
 {
-    /** @var IOrderSource */
+    /** @var OrderSourceInterface */
     protected $source;
 
     /**
      * OrderRepository constructor.
-     * @param IOrderSource $source
+     * @param OrderSourceInterface $source
      *
      * Принцип открытости/закрытости (Open-closed)
      */
-    public function __construct(IOrderSource $source)
+    public function __construct(OrderSourceInterface $source)
     {
         $this->setSource($source);
     }
 
     /**
-     * @param IOrderSource $source
+     * @param OrderSourceInterface $source
      * @return $this
      */
-    public function setSource(IOrderSource $source)
+    public function setSource(OrderSourceInterface $source)
     {
         $this->source = $source;
         return $this;

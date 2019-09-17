@@ -6,13 +6,13 @@
 
 namespace MSBios\Source;
 
-use MSBios\IOrderSource;
+use MSBios\OrderSourceInterface;
 
 /**
  * Class MySQLOrderSource
  * @package MSBios\Source
  */
-class MySQLOrderSource implements IOrderSource
+class MySQLOrderSource implements OrderSourceInterface
 {
 
     /**

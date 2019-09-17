@@ -6,13 +6,13 @@
 
 namespace MSBios\Source;
 
-use MSBios\IOrderSource;
+use MSBios\OrderSourceInterface;
 
 /**
  * Class ApiOrderSource
  * @package MSBios\Source
  */
-class ApiOrderSource implements IOrderSource
+class ApiOrderSource implements OrderSourceInterface
 {
     /**
      * @param $orderID
